@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Scanner {
     public static void main(String[] args) {
@@ -29,7 +30,24 @@ public class Scanner {
                     fileData.remove(i);
                 }
             }
-            System.out.println(noiseData);
+            HashMap<Integer, Integer> valMaxMinGD = new HashMap<Integer, Integer>();
+            for (int i = 0; i < fileData.size(); i++){
+                String X = fileData.get(i);
+                int x = Integer.parseInt(X);
+                if (valMaxMinGD.containsKey(x)){
+                    int y = valMaxMinGD.get(x) + 1;
+                    valMaxMinGD.put(x , y);
+                }
+                else {
+                    valMaxMinGD.put(x,1);
+                }
+
+            }
+            for (Integer i : valMaxMinGD.keySet()) {
+                System.out.println("Value: " + i + " Reps: " + valMaxMinGD.get(i));
+            }
+
+
         }
         catch (FileNotFoundException e){
             System.out.println("Error trying to read the file: " + e.toString());
