@@ -27,21 +27,10 @@ public class Scanner {
             System.out.println("Error trying to read the file: " + e.toString());
         }
 
-//        Writing text to the file
-        System.out.print("Enter a line of text to add to the file: ");
-        String input = scanner.nextLine();
-        System.out.println("Trying to write to file...");
-        try{
-//            Other ways to write to the file: FileWriter, Files.writeString, FileOutputStream
-//            You can change the second argument of FileWriter to false if you want to overwrite the contents of the file.
-            FileWriter fw = new FileWriter(file, true);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.newLine();
-            bw.write(input);
-            bw.close();
-        }
-        catch (IOException e){
-            System.out.println("Error trying to write to the file: " + e.toString());
-        }
+
+
+
+
     }
 }
+// C:\Users\Adam\repos\MidTermJavaChallenge\Test.txt
