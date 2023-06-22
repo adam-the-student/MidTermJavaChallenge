@@ -10,6 +10,7 @@ public class Scanner {
 
         File file = new File(filePath);
         ArrayList<String> fileData = new ArrayList<>();
+        ArrayList<String> noiseData = new ArrayList<>();
 
         System.out.println("Trying to read from that file...");
         try {
@@ -21,7 +22,14 @@ public class Scanner {
                 fileData.add(data);
             }
             fileScanner.close();
-            System.out.println(fileData);
+            for (int i = 0; i<fileData.size(); i++){
+                String x = fileData.get(i);
+                if (x.length()>4){
+                    noiseData.add(x);
+                    fileData.remove(i);
+                }
+            }
+            System.out.println(noiseData);
         }
         catch (FileNotFoundException e){
             System.out.println("Error trying to read the file: " + e.toString());
