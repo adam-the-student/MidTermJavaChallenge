@@ -30,7 +30,6 @@ public class Scanner {
 
 
 
-
     }
 }
 // C:\Users\Adam\repos\MidTermJavaChallenge\Test.txt
