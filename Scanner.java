@@ -30,6 +30,7 @@ public class Scanner {
                     fileData.remove(i);
                 }
             }
+            //------------------------------------------GoodData Sorting------------------------------------------------
             HashMap<Integer, Integer> valMaxMinGD = new HashMap<Integer, Integer>();
             for (int i = 0; i < fileData.size(); i++){
                 String X = fileData.get(i);
@@ -43,11 +44,38 @@ public class Scanner {
                 }
 
             }
-            for (Integer i : valMaxMinGD.keySet()) {
-                System.out.println("Value: " + i + " Reps: " + valMaxMinGD.get(i));
+            int maxKey=0;
+            int maxVal=0;
+            int minKey=0;
+            int minVal=3000;
+            for (int i : valMaxMinGD.keySet()) {
+                int hold = valMaxMinGD.get(i);
+                if(maxVal<hold){
+                    maxVal=hold;
+                    maxKey=i;
+                }
+                else if (minVal>hold){
+                    minVal=hold;
+                    minKey=i;
+                }
             }
-
-
+            System.out.println("Most Frequent` GOOD Value: " +maxKey +". " +"Number of Reps: " +maxVal +".");
+            System.out.println("Least Frequent GOOD Value: " +minKey +". " +"Number of Reps: " +minVal +".");
+            //------------------------------------------NoiseData Sorting-----------------------------------------------
+            int minNoise = 10000000;
+            int maxNoise =0;
+            for (int i =0; i< noiseData.size(); i++){
+                String HOLD = noiseData.get(i);
+                int hold = Integer.parseInt(HOLD);
+                if(maxNoise < hold) {
+                    maxNoise = hold;
+                }
+                else if (minNoise > hold){
+                    minNoise = hold;
+                }
+            }
+            System.out.println("Largest NOISE Value: " +maxNoise);
+            System.out.println("Smallest NOISE Value: " +minNoise);
         }
         catch (FileNotFoundException e){
             System.out.println("Error trying to read the file: " + e.toString());
