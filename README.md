@@ -11,11 +11,14 @@ Your program needs to address the following questions:
 2. Good data: Which value appears least frequently, and how many times does it repeat?
 3. Noise data: What is the highest value among the noise?
 4. Noise data: What is the lowest value among the noise?
+
+
    Your code must be optimized for efficient memory usage and CPU utilization. This means ensuring
    that data is stored efficiently in data structures and minimizing the number of times data is processed
    for improved CPU efficiency
    I have attached three sample datasets for you to test your code. Each sample file is 5MB (!!)
-   Basic rules :
+   
+Basic rules :
 1. This assignment is to be completed as a team, with four teams selected.
 2. You are not allowed to seek assistance from individuals outside of your team to find the solution.
 3. Usage of Chat-GPT or any other external resources to aid in finding the solution is prohibited.
