@@ -28,10 +28,11 @@ public class Scanner {
                 if (x.length()>4){
                     noiseData.add(x);
                     fileData.remove(i);
+                    i--;
                 }
             }
             //------------------------------------------GoodData Sorting------------------------------------------------
-            HashMap<Integer, Integer> valMaxMinGD = new HashMap<Integer, Integer>();
+            HashMap<Integer, Integer> valMaxMinGD = new HashMap<>();
             for (int i = 0; i < fileData.size(); i++){
                 String X = fileData.get(i);
                 int x = Integer.parseInt(X);
@@ -78,7 +79,7 @@ public class Scanner {
             System.out.println("Smallest NOISE Value: " +minNoise);
         }
         catch (FileNotFoundException e){
-            System.out.println("Error trying to read the file: " + e.toString());
+            System.out.println("Error trying to read the file: " +e);
         }
 
 
