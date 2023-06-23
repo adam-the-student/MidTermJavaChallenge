@@ -60,7 +60,7 @@ public class Scanner {
                     minKey=i;
                 }
             }
-            System.out.println("Most Frequent` GOOD Value: " +maxKey +". " +"Number of Reps: " +maxVal +".");
+            System.out.println("Most Frequent GOOD Value: " +maxKey +". " +"Number of Reps: " +maxVal +".");
             System.out.println("Least Frequent GOOD Value: " +minKey +". " +"Number of Reps: " +minVal +".");
             //------------------------------------------NoiseData Sorting-----------------------------------------------
             int minNoise = 10000000;
